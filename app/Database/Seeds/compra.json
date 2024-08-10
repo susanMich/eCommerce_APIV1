@@ -1,0 +1,26 @@
+{
+"fecha": "2022-01-07",
+"idproveedor": 1,
+"numero_comprobante": "001-005-0000065887",
+"detalle":[
+	{
+		"producto_id": 1,
+		"stock": 50,
+		"fechavencimiento": "2022-08-07",
+		"costo": 5.00,
+		"precio_minorista": 6.10,
+		"precio_mayorista": 5.60,
+		"descuento": 0.05,
+		"iva": 0.12
+	},
+	{
+		"producto_id": 2,
+		"stock": 40,
+		"fechavencimiento": "2022-04-10",
+		"costo": 7.00,
+		"precio_minorista": 8.10,
+		"precio_mayorista": 7.60,
+		"descuento": 0.04,
+		"iva": 0.00
+	}]
+}
