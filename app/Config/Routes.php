@@ -38,7 +38,9 @@ $routes->set404Override();
 
 // URLs de Usuario
 $routes->get('/', 'Home::index');
-$routes->get('login/', 'Auth::login');
+
+$routes->post('login/', 'Auth::login');
+
 $routes->resource('productos', ['controller' => 'Producto']);
 
 

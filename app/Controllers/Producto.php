@@ -57,16 +57,23 @@ class Producto extends BaseController
     {
        try{
              $model = new ProductoModel();
-             $data = $this->request->getRawInput();
-            if (!$model->update($id, $data)) {
+             $input = json_decode($this->request->getBody(), true);
+
+            if (!$model->find($id)) {
+                return $this->sendBadRequest('Producto no encontrado.');
+            }
+
+            if (!$model->update($id, $input)) {
                 return $this->sendBadRequest("Error al actualizar producto");
             }
-            return $this->sendResponse("Producto actualizado");
+            return $this->sendResponse($model->find($id));
         
-        } catch (Exception $e) {
+            
+
+       } catch (Exception $e) {
             return $this->sendResponse(['error' => $e->getMessage()], ResponseInterface::HTTP_INTERNAL_SERVER_ERROR);
         }
-       
+        
     }
 
     // DELETE /productos/1
