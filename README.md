@@ -15,7 +15,7 @@ En esta primera versión está incluída la gestión de productos construida , q
 
 ## Instalación
 
-1. Clona el repositorio:
+1. Clona el repositorios:
 
     ```bash
     git clone https://github.com/cristianzambrano/eCommerce_APIV1.git
